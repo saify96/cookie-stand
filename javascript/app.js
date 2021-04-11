@@ -70,6 +70,73 @@ let li = document.createElement('li');
 unorderlist.appendChild(li);
 li.textContent = `Total: ${seattle.totalCo} cookies`;
 
+/////////////////////
+ 
+const Tokyo = {
+  minCust:3,
+  maxCust: 24,
+  avgCo: 6.3,
+  avgCust:[],
+  avgCoPerHour:[],
+  totalCo:0,
+
+  getAvgCust:function(){
+    for (let i=0 ; i<14 ; i++){
+      this.avgCust[i] = getRandomIntInclusive(this.minCust , this.maxCust);
+    }
+  },
+
+  getavgCoPerHour:function(){
+    for (let i=0 ; i<14 ; i++){
+      this.avgCoPerHour[i]= Math.floor(this.avgCust[i]*this.avgCo);
+    }
+  },
+
+  getSum:function(){
+
+    for (let i=0 ; i<14 ; i++){
+      this.totalCo =this.avgCoPerHour[i]+this.totalCo;
+    }
+  }
+
+};
+
+Tokyo.getAvgCust();
+console.log(Tokyo.avgCust);
+
+Tokyo.getavgCoPerHour();
+console.log(Tokyo.avgCoPerHour);
+
+Tokyo.getSum();
+console.log(Tokyo.totalCo);
+
+
+let containerTokyo = document.getElementById('branch');
+let h2Tokyo = document.createElement('h2');
+containerTokyo.appendChild(h2Tokyo);
+h2Tokyo.textContent = 'Tokyo';
+let unorderlistTokyo = document.createElement('ul');
+containerTokyo.appendChild(unorderlistTokyo);
+
+for(let i=0 ; i<14 ; i++){
+  let liTokyo = document.createElement('li');
+  unorderlistTokyo.appendChild(liTokyo);
+  if (i<6){
+    liTokyo.textContent = `${i+6} am: `+ Tokyo.avgCoPerHour[i] + ' cookies';
+  }
+  else if (i===6) {
+    liTokyo.textContent = `${i+6} pm: `+ Tokyo.avgCoPerHour[i] + ' cookies';
+  }
+  else {
+    liTokyo.textContent = `${i-6} pm: `+ Tokyo.avgCoPerHour[i] + ' cookies';
+  }
+}
+
+let liTokyo = document.createElement('li');
+unorderlistTokyo.appendChild(li);
+liTokyo.textContent = `Total: ${Tokyo.totalCo} cookies`;
+
+
 
 
 
