@@ -273,3 +273,71 @@ unorderlistParis.appendChild(liParis);
 liParis.textContent = `Total: ${Paris.totalCo} cookies`;
 
 
+///Paris
+
+ 
+const Lima = {
+  minCust:2,
+  maxCust: 16,
+  avgCo: 4.6,
+  avgCust:[],
+  avgCoPerHour:[],
+  totalCo:0,
+
+  getAvgCust:function(){
+    for (let i=0 ; i<14 ; i++){
+      this.avgCust[i] = getRandomIntInclusive(this.minCust , this.maxCust);
+    }
+  },
+
+  getavgCoPerHour:function(){
+    for (let i=0 ; i<14 ; i++){
+      this.avgCoPerHour[i]= Math.floor(this.avgCust[i]*this.avgCo);
+    }
+  },
+
+  getSum:function(){
+
+    for (let i=0 ; i<14 ; i++){
+      this.totalCo =this.avgCoPerHour[i]+this.totalCo;
+    }
+  }
+
+};
+
+Lima.getAvgCust();
+console.log(Lima.avgCust);
+
+Lima.getavgCoPerHour();
+console.log(Lima.avgCoPerHour);
+
+Lima.getSum();
+console.log(Lima.totalCo);
+
+
+let containerLima = document.getElementById('branch');
+let h2Lima = document.createElement('h2');
+containerLima.appendChild(h2Lima);
+h2Lima.textContent = 'Lima';
+let unorderlistLima = document.createElement('ul');
+containerLima.appendChild(unorderlistLima);
+
+for(let i=0 ; i<14 ; i++){
+  let liLima = document.createElement('li');
+  unorderlistLima.appendChild(liLima);
+  if (i<6){
+    liLima.textContent = `${i+6} am: `+ Lima.avgCoPerHour[i] + ' cookies';
+  }
+  else if (i===6) {
+    liLima.textContent = `${i+6} pm: `+ Lima.avgCoPerHour[i] + ' cookies';
+  }
+  else {
+    liLima.textContent = `${i-6} pm: `+ Lima.avgCoPerHour[i] + ' cookies';
+  }
+}
+
+let liLima = document.createElement('li');
+unorderlistLima.appendChild(liLima);
+liLima.textContent = `Total: ${Lima.totalCo} cookies`;
+
+
