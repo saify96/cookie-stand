@@ -3,6 +3,7 @@
 }
 
 header{
+    
     text-align: center;
     font-size: xx-large;
     background-color: rgba(68,68,68,255);
@@ -14,6 +15,7 @@ header img {
 }
 
 header nav {
+
     float: left;
 }
 
@@ -32,8 +34,7 @@ body{
 
 #time {
     position: absolute;
-float: left;   
- width: 300px;
+    width: 300px;
     height: 219px;
     margin-left: 0%;
     display: inline-block;
@@ -65,7 +66,8 @@ float: left;
 }
 
 #imgs {
-margin-top: 300px;
+    margin-left: 10%;
+    margin-top: 300px;
     display: inline-flex  ;
     width: 200px;
     height: 200px;
@@ -77,4 +79,32 @@ footer {
      text-align: center;
      color:salmon;
 
-     
+}
+
+main table {
+    font-size: large;
+    background-color: salmon;
+    color: rgba(68,68,68,255);
+    text-align: center;
+    margin: 20px;
+}
+main table td {
+    height: 30px;
+    vertical-align: middle;
+  
+}
+table, th , td {
+    border: 1px solid black;
+    padding: 10px;
+  }
+  
+#family{
+margin-left: 20%;
+    display: block;
+}
+
+#middlepic {
+    position: absolute;
+    left: 30%;
+    display: block;
+}
