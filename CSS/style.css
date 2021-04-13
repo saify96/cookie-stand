@@ -2,3 +2,27 @@
     box-sizing: border-box;
 }
 
+header{
+    text-align: center;
+    font-size: xx-large;
+    background-color: rgba(68,68,68,255);
+    color:salmon;
+}
+
+header img {
+    width: 200px;
+}
+
+header nav {
+    float: left;
+}
+
+header li{
+    padding: 10px;
+}
+
+header li a {
+    text-decoration: none;
+    color:salmon;
+}
+
