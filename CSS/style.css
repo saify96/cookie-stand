@@ -25,4 +25,56 @@ header li a {
     text-decoration: none;
     color:salmon;
 }
+body{
+    width: 100%;
+    margin: 0;
+}
 
+#time {
+    position: absolute;
+float: left;   
+ width: 300px;
+    height: 219px;
+    margin-left: 0%;
+    display: inline-block;
+    background-color: salmon;
+    font-size: x-large;
+    color:rgba(68,68,68,255) ;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 25px;
+}
+
+#locations {
+    position: absolute;
+    float: right;  
+    width: 300px;
+    margin-left: 65%;
+    display: inline-block;
+    background-color: salmon;
+    font-size: larger;
+    color:rgba(68,68,68,255) ;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 25px;
+}
+#locations h2 {
+    font-size: x-large;
+}
+
+#locations li {
+    padding: 5px;
+}
+
+#imgs {
+margin-top: 300px;
+    display: inline-flex  ;
+    width: 200px;
+    height: 200px;
+}
+
+footer {
+    background-color: rgba(68,68,68,255);
+    padding: 20px;
+     text-align: center;
+     color:salmon;
+
+     
