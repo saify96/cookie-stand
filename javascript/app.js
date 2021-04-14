@@ -101,10 +101,10 @@ paris.render();
 lima.getAvgCust();
 lima.getavgCoPerHour();
 lima.render();
-
 let footer = document.createElement('tr');
 table.appendChild(footer );
 footer.textContent='Totals';
+
 let totals =0;
 for (let j=0 ; j<14 ; j++){
   let total=0;
@@ -120,6 +120,46 @@ for (let j=0 ; j<14 ; j++){
 let fot = document.createElement('td');
 footer.appendChild(fot);
 fot.textContent=totals;
+
+const form = document.getElementById('forms');
+form.addEventListener('submit', formSubmitting);
+
+function formSubmitting(event){
+  event.preventDefault();
+  console.log(event);
+  let branchName = event.target.locationField.value;
+  let minimumCust = parseInt(event.target.minCust.value);
+  let maximumCust = parseInt(event.target.maxCust.value);
+  let avgCookies = parseFloat(event.target.maxCust.value);
+  let newBranch = new Cookies(branchName,minimumCust,maximumCust,avgCookies);
+  table.deleteRow(table.rows.length-1);
+  newBranch.getAvgCust();
+  newBranch.getavgCoPerHour();
+  newBranch.render();
+
+  footer = document.createElement('tr');
+  table.appendChild(footer );
+  footer.textContent='Totals';
+  totals =0;
+  for (let j=0 ; j<14 ; j++){
+    let total=0;
+    for(let i=0 ; i<arrOfobjects.length ; i++){
+      total = total + arrOfobjects[i].avgCoPerHour[j];
+      totals = totals +total ;
+    }
+    let fot = document.createElement('td');
+    footer.appendChild(fot);
+    fot.textContent=total;
+  }
+  let fot = document.createElement('td');
+  footer.appendChild(fot);
+  fot.textContent=totals;
+}
+
+
+
+
+
 
 
 // console.log(arrOfobjects[0].avgCoPerHour[0] );

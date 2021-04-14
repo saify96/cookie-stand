@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sales</title>
-    <link rel="stylesheet" href="CSS/reset.css">
     <link rel="stylesheet" href="CSS/style.css">
 
 </head>
@@ -23,6 +22,26 @@
         <img src="imgs/salmon.png" >
     </header>
     <main>
+        <form id="forms"> 
+            <fieldset>
+                <legend>Resturant Branch</legend>
+                <label for="locationField">Branch Name: </label>
+                <input type="text" id="locationField">
+                <br>
+                <label for="minCust">The minimum number of customers per hour:</label>
+                <input type="text" id="minCust">
+                <br>
+                <label for="maxCust">The maximum number of customers per hour:</label>
+                <input type="text" id="maxCust">
+                <br>
+                <label for="avgCo">The average number of cookies purchased per customer:</label>
+                <input type="text" id="avgCo">
+                <br>
+                <input type="submit" value="Submit">
+            </fieldset>
+        </form>
+
+
         <div id="branch">
 
         </div>
