@@ -3,7 +3,7 @@
 }
 
 header{
-    
+    font-family: 'Zen Dots', cursive;
     text-align: center;
     font-size: xx-large;
     background-color: rgba(68,68,68,255);
@@ -13,6 +13,7 @@ header{
 header img {
     width: 200px;
 }
+
 
 header nav {
 
@@ -41,20 +42,21 @@ body{
     background-color: salmon;
     font-size: x-large;
     color:rgba(68,68,68,255) ;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: Verdana;
     padding: 25px;
 }
 
 #locations {
     position: absolute;
     float: right;  
+    top: 100.52px;
     width: 300px;
     margin-left: 65%;
     display: inline-block;
     background-color: salmon;
     font-size: larger;
     color:rgba(68,68,68,255) ;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: Verdana;
     padding: 25px;
 }
 #locations h2 {
@@ -66,7 +68,7 @@ body{
 }
 
 #imgs {
-    margin-left: 10%;
+    margin-left:19%;
     margin-top: 300px;
     display: inline-flex  ;
     width: 200px;
@@ -107,4 +109,24 @@ margin-left: 20%;
     position: absolute;
     left: 30%;
     display: block;
+}
+
+#contacts {
+    position: relative;
+    height: 400px;
+    top: 250px;
+    background-color: rgba(68,68,68,255);   
+    width: 50%;
+    margin-left: 25%;
+    color: whitesmoke;
+    padding: 25px;
+    font-size: larger;
+}
+#map {
+    float: right;
+  
+}
+
+#info {
+    float: left;
 }
